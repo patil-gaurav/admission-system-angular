@@ -9,6 +9,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { HttpModule } from '@angular/http';
 import { SignupComponent } from './user/signup/signup.component';
+import { LocalStorageService, SessionStorageService } from 'ngx-webstorage';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { SignupComponent } from './user/signup/signup.component';
     HttpModule
   ],
   providers: [
-    // no need to place any providers due to the `providedIn` flag...
+    LocalStorageService,
+    SessionStorageService
   ],
   bootstrap: [ AppComponent ]
 })

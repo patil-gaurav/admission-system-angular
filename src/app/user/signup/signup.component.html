@@ -1,3 +1,26 @@
 <p>
   signup works!
 </p>
+<form #userlogin="ngForm" (ngSubmit)="onClickSubmit(userlogin.value)">
+   <input type="text" name="email" placeholder="email" ngModel>
+   <br/>
+   <input type="password" name="password" placeholder="password" ngModel>
+   <br/>
+   <input type="submit" value="submit">
+</form>
+
+<input type="button" value="getColleges" (click)="getColleges()">
+
+
+<div class="" *ngFor="let college of colleges">
+  {{college.name}}
+</div>
+
+
+<!-- <form #usersignup = "ngForm" (onSubmit) = "onClickSubmit(usersignup.value)" class="">
+  <input type="text" name = "email" ngModel>
+  <br>
+  <input type="password" name = "password" ngModel>
+  <br>
+  <input type="submit" value="submit">
+</form> -->
